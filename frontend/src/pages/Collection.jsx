@@ -76,7 +76,7 @@ const Collection = () => {
 
   return (
     <div>
-           <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-1 border-t'>
+      <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-1 border-t'>
         {/* Filter Options*/}
         <div className='min-w-60'>
           <p onClick={()=> setShowFilter(!showFilter)} className='my-2 text-xl flex items-center cursor-pointer gap-2'>Filters 
@@ -135,7 +135,7 @@ const Collection = () => {
           {/* Map Products */}
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
             {filterProducts.map((item, index) => (
-              <ProductItem key={index} name={item.name} id={item.id} price={item.price} image={item.image} />
+              <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image} />
             ))}
           </div>
         </div>
